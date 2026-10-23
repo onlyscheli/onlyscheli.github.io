@@ -7,7 +7,7 @@
 
   <title>onlyscheli</title>
 
-  <!-- favicon: bild als browsersymbol -->
+  <!-- favicon -->
   <link rel="icon" type="image/jpeg" href="./1792328531760.jpg">
 
   <style>
@@ -138,6 +138,31 @@
       color: #ffffff;
     }
 
+    /* vibecheck-button */
+    .vibecheck-card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      min-height: 76px;
+    }
+
+    .vibecheck-text {
+      font-weight: 600;
+    }
+
+    .vibecheck-icon {
+      width: 58px;
+      height: 58px;
+      object-fit: contain;
+      flex-shrink: 0;
+      transition: transform 0.2s ease;
+    }
+
+    .vibecheck-card:hover .vibecheck-icon {
+      transform: scale(1.08) rotate(3deg);
+    }
+
     footer {
       margin-top: 60px;
       font-size: 0.85rem;
@@ -172,21 +197,39 @@
         align-items: center;
         gap: 16px;
       }
+
+      .vibecheck-card {
+        min-height: 70px;
+      }
+
+      .vibecheck-icon {
+        width: 52px;
+        height: 52px;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <!-- startbereich -->
   <section class="hero">
-    <img src="1792328531760.jpg" alt="onlyscheli emoji" class="emoji">
+    <img
+      src="1792328531760.jpg"
+      alt="onlyscheli emoji"
+      class="emoji"
+    >
+
     <h1 class="title">onlyscheli</h1>
+
     <div class="scroll-hint">runterscrollen ↓</div>
   </section>
 
   <!-- menü und links -->
   <main class="content">
+
     <div class="main-navigation">
+
       <nav>
         <ul class="menu">
           <li><a href="#about">über mich</a></li>
@@ -196,17 +239,31 @@
       </nav>
 
       <div class="links-container">
+
+        <!-- vibecheck -->
         <a
           href="https://regal-gumption-e2c560.netlify.app/"
-          class="link-card"
+          class="link-card vibecheck-card"
           target="_blank"
           rel="noopener noreferrer"
-        >link 1</a>
+        >
+          <span class="vibecheck-text">vibecheck</span>
+
+          <img
+            src="vibecheck.png"
+            alt="vibecheck emoji"
+            class="vibecheck-icon"
+          >
+        </a>
 
         <a href="#" class="link-card">link 2 (demnächst)</a>
+
         <a href="#" class="link-card">social media</a>
+
         <a href="impressum.html" class="link-card">impressum</a>
+
         <a href="datenschutz.html" class="link-card">datenschutz</a>
+
       </div>
     </div>
 
@@ -214,6 +271,7 @@
       <a href="impressum.html">impressum</a> |
       <a href="datenschutz.html">datenschutz</a>
     </footer>
+
   </main>
 
 </body>
