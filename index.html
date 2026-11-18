@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2187109190409697"
-     crossorigin="anonymous"></script>
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2187109190409697"
+    crossorigin="anonymous"></script>
+
   <title>onlyscheli</title>
 
   <!-- favicon -->
@@ -17,6 +19,10 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       background-color: #ffffff;
       color: #000000;
@@ -24,11 +30,11 @@
         Roboto, Helvetica, Arial, sans-serif;
       text-transform: lowercase;
       overflow-x: hidden;
-      scroll-behavior: smooth;
     }
 
+    /* startbereich */
     .hero {
-      height: 100vh;
+      min-height: 65vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -52,33 +58,14 @@
       letter-spacing: -1px;
     }
 
-    .scroll-hint {
-      position: absolute;
-      bottom: 30px;
-      font-size: 0.85rem;
-      opacity: 0.4;
-      animation: bounce 2s infinite;
-    }
-
-    @keyframes bounce {
-      0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-      }
-      40% {
-        transform: translateY(-8px);
-      }
-      60% {
-        transform: translateY(-4px);
-      }
-    }
-
+    /* hauptbereich */
     .content {
-      min-height: 100vh;
+      min-height: 35vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
-      padding: 80px 20px 40px;
+      padding: 10px 20px 40px;
     }
 
     .main-navigation {
@@ -88,30 +75,7 @@
       align-items: center;
     }
 
-    nav {
-      margin-bottom: 60px;
-    }
-
-    .menu {
-      list-style: none;
-      display: flex;
-      gap: 24px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .menu a {
-      color: #000000;
-      text-decoration: none;
-      font-size: 1.1rem;
-      font-weight: 500;
-      transition: opacity 0.2s ease;
-    }
-
-    .menu a:hover {
-      opacity: 0.5;
-    }
-
+    /* buttons */
     .links-container {
       width: 100%;
       max-width: 400px;
@@ -121,7 +85,10 @@
     }
 
     .link-card {
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
       width: 100%;
       padding: 16px 20px;
       border: 1px solid #000000;
@@ -129,8 +96,10 @@
       text-decoration: none;
       text-align: center;
       font-size: 1rem;
+      font-weight: 400;
       border-radius: 8px;
-      transition: background-color 0.2s ease, color 0.2s ease;
+      transition: background-color 0.2s ease,
+                  color 0.2s ease;
     }
 
     .link-card:hover {
@@ -138,6 +107,14 @@
       color: #ffffff;
     }
 
+    /* instagram icon */
+    .instagram-icon {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+    }
+
+    /* footer */
     footer {
       margin-top: 60px;
       font-size: 0.85rem;
@@ -157,7 +134,12 @@
       text-decoration: underline;
     }
 
+    /* mobile ansicht */
     @media (max-width: 600px) {
+      .hero {
+        min-height: 55vh;
+      }
+
       .emoji {
         width: 130px;
         height: 130px;
@@ -167,10 +149,17 @@
         font-size: 2rem;
       }
 
-      .menu {
-        flex-direction: column;
-        align-items: center;
-        gap: 16px;
+      .content {
+        min-height: 45vh;
+        padding: 10px 20px 30px;
+      }
+
+      .links-container {
+        max-width: 400px;
+      }
+
+      footer {
+        margin-top: 50px;
       }
     }
   </style>
@@ -180,6 +169,7 @@
 
   <!-- startbereich -->
   <section class="hero">
+
     <img
       src="1792328531760.jpg"
       alt="onlyscheli emoji"
@@ -188,43 +178,91 @@
 
     <h1 class="title">onlyscheli</h1>
 
-    <div class="scroll-hint">runterscrollen ↓</div>
   </section>
 
-  <!-- menü und links -->
+  <!-- links -->
   <main class="content">
 
     <div class="main-navigation">
 
-      <nav>
-        <ul class="menu">
-          <li><a href="#about">über mich</a></li>
-          <li><a href="#projects">projekte</a></li>
-          <li><a href="#contact">kontakt</a></li>
-        </ul>
-      </nav>
-
       <div class="links-container">
 
-        <!-- storymaker -->
+        <!-- foodpairingguide -->
         <a
-          href="https://onlyscheli.com/storymaker"
+          href="https://onlyscheli.com/pairing"
           class="link-card"
           target="_blank"
           rel="noopener noreferrer"
-        >storymaker</a>
+        >
+          foodpairingguide
+        </a>
 
-        <a href="#" class="link-card">link 2 (demnächst)</a>
+        <!-- instagram craftbeerpairing -->
+        <a
+          href="https://instagram.com/craftbeerpairing"
+          class="link-card"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
 
-        <a href="#" class="link-card">social media</a>
+          <!-- instagram logo als svg -->
+          <svg
+            class="instagram-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <rect
+              x="2"
+              y="2"
+              width="20"
+              height="20"
+              rx="5"
+              ry="5"
+            />
+            <circle
+              cx="12"
+              cy="12"
+              r="4"
+            />
+            <circle
+              cx="17.5"
+              cy="6.5"
+              r="1"
+              fill="currentColor"
+              stroke="none"
+            />
+          </svg>
 
-        <a href="impressum.html" class="link-card">impressum</a>
+          craftbeerpairing
+        </a>
 
-        <a href="datenschutz.html" class="link-card">datenschutz</a>
+        <!-- impressum -->
+        <a
+          href="impressum.html"
+          class="link-card"
+        >
+          impressum
+        </a>
+
+        <!-- datenschutz -->
+        <a
+          href="datenschutz.html"
+          class="link-card"
+        >
+          datenschutz
+        </a>
 
       </div>
+
     </div>
 
+    <!-- footer -->
     <footer>
       <a href="impressum.html">impressum</a> |
       <a href="datenschutz.html">datenschutz</a>
